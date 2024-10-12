@@ -3,9 +3,9 @@ package br.edu.unichristus.data.dto;
 import lombok.Data;
 
 @Data
-public class UserLowDTO {
+public class ProductLowDTO {
 
     private String name;
-    private String email;
+    private Double price;
 
 }

@@ -1,7 +1,7 @@
 package br.edu.unichristus.controller;
 
-import br.edu.unichristus.data.dto.UserDTO;
-import br.edu.unichristus.data.dto.UserLowDTO;
+import br.edu.unichristus.data.dto.ProductDTO;
+import br.edu.unichristus.data.dto.ProductLowDTO;
 import br.edu.unichristus.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -26,17 +26,17 @@ public class ProductController {
             @ApiResponse(responseCode = "400", description = "Exception não tratada. ")
     })
     @PostMapping
-    public UserDTO create(@RequestBody UserDTO user){
-        return service.save(user);
+    public ProductDTO create(@RequestBody ProductDTO product){
+        return service.save(product);
     }
 
     @PutMapping
-    public UserDTO update(@RequestBody UserDTO user){
-        return service.save(user);
+    public ProductDTO update(@RequestBody ProductDTO product){
+        return service.save(product);
     }
 
     @GetMapping("/all")
-    public List<UserLowDTO> findAll(){
+    public List<ProductLowDTO> findAll(){
         return service.findAll();
     }
 
@@ -46,7 +46,7 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public UserDTO findById(@PathVariable Long id){
+    public ProductDTO findById(@PathVariable Long id){
        return service.findById(id);
     }
 

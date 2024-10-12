@@ -1,7 +1,7 @@
 package br.edu.unichristus.service;
 
-import br.edu.unichristus.data.dto.UserDTO;
-import br.edu.unichristus.data.dto.UserLowDTO;
+import br.edu.unichristus.data.dto.ProductDTO;
+import br.edu.unichristus.data.dto.ProductLowDTO;
 import br.edu.unichristus.data.model.Product;
 import br.edu.unichristus.dozer.DozerConverter;
 import br.edu.unichristus.exception.CommonsException;
@@ -18,7 +18,7 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public UserDTO save(UserDTO user){
+    public ProductDTO save(ProductDTO user){
         if(user.getName().length() > 150){
             throw new CommonsException(HttpStatus.BAD_REQUEST,
                     "unichristus.service.user.badrequest",
@@ -31,26 +31,26 @@ public class ProductService {
         var entityDTO = repository.save(entity);
 
         //Converte e retorna o User em UserDTO
-        return DozerConverter.parseObject(entityDTO, UserDTO.class);
+        return DozerConverter.parseObject(entityDTO, ProductDTO.class);
     }
 
-    public List<UserLowDTO> findAll(){
+    public List<ProductLowDTO> findAll(){
         return DozerConverter.parseListObjects(
-                repository.findAll(), UserLowDTO.class);
+                repository.findAll(), ProductLowDTO.class);
     }
 
     public void delete(Long id){
         repository.deleteById(id);
     }
 
-    public UserDTO findById(Long id){
+    public ProductDTO findById(Long id){
         var entity = repository.findById(id);
         if(entity.isEmpty()){
             throw new CommonsException(HttpStatus.NOT_FOUND,
                     "unichristus.service.uuser.notfound",
                     "O usuário com a ID informada, não foi encontrado");
         }
-        return DozerConverter.parseObject(entity.get(), UserDTO.class);
+        return DozerConverter.parseObject(entity.get(), ProductDTO.class);
     }
 
 }
