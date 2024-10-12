@@ -2,7 +2,7 @@ package br.edu.unichristus.controller;
 
 import br.edu.unichristus.data.dto.UserDTO;
 import br.edu.unichristus.data.dto.UserLowDTO;
-import br.edu.unichristus.service.UserService;
+import br.edu.unichristus.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -13,10 +13,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
-public class UserController {
+public class ProductController {
 
     @Autowired
-    private UserService service;
+    private ProductService service;
 
     @Operation(summary = "Cadastra os dados de um usuário | role: [ADMIN]",
                         tags = "User")
