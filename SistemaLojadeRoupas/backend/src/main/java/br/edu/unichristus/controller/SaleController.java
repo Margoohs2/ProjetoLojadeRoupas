@@ -1,4 +1,4 @@
 package br.edu.unichristus.controller;
 
-public class ReportController {
+public class SaleController {
 }
