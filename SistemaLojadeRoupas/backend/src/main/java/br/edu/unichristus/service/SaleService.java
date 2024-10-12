@@ -2,7 +2,7 @@ package br.edu.unichristus.service;
 
 import br.edu.unichristus.dto.ItemReportDTO;
 import br.edu.unichristus.data.model.Sale;
-import br.edu.unichristus.data.repository.SaleRepository;
+import br.edu.unichristus.repository.SaleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,11 +13,11 @@ import java.util.stream.Collectors;
 public class SaleService {
 
     @Autowired
-    private SaleRepository saleRepository;
+    private br.edu.unichristus.repository.SaleRepository repository;
 
     public List<ItemReportDTO> generateSalesReport() {
         // Fetching all sales
-        List<Sale> sales = saleRepository.findAll();
+        List<Sale> sales = repository.findAll();
 
         // Generating the report by aggregating data
         return sales.stream().map(sale -> {
