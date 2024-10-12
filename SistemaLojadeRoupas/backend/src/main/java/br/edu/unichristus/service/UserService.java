@@ -2,7 +2,7 @@ package br.edu.unichristus.service;
 
 import br.edu.unichristus.data.dto.UserDTO;
 import br.edu.unichristus.data.dto.UserLowDTO;
-import br.edu.unichristus.data.model.User;
+import br.edu.unichristus.data.model.Product;
 import br.edu.unichristus.dozer.DozerConverter;
 import br.edu.unichristus.exception.CommonsException;
 import br.edu.unichristus.repository.UserRepository;
@@ -25,7 +25,7 @@ public class UserService {
                     "O limite de caracteres do nome do usuário é 150");
         }
         //Converte UserDTO em User
-        var entity = DozerConverter.parseObject(user, User.class);
+        var entity = DozerConverter.parseObject(user, Product.class);
 
         //Recebe retorno do save (User)
         var entityDTO = repository.save(entity);
