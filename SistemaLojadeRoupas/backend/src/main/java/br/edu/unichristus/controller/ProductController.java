@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/user")
+@RequestMapping("/api/v1/product")
 public class ProductController {
 
     @Autowired
     private ProductService service;
 
-    @Operation(summary = "Cadastra os dados de um usuário | role: [ADMIN]",
-                        tags = "User")
+    @Operation(summary = "Cadastra os dados de um produto | role: [ADMIN]",
+                        tags = "Product")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "Usuário cadastrado com sucesso"),
-            @ApiResponse(responseCode = "400", description = "O limite de caracteres do nome do usuário é 150"),
+            @ApiResponse(responseCode = "200", description = "Produto cadastrado com sucesso"),
+            @ApiResponse(responseCode = "400", description = "O limite de caracteres do nome do produto é 150"),
             @ApiResponse(responseCode = "400", description = "Exception não tratada. ")
     })
     @PostMapping
@@ -49,7 +49,5 @@ public class ProductController {
     public UserDTO findById(@PathVariable Long id){
        return service.findById(id);
     }
-
-
 
 }
