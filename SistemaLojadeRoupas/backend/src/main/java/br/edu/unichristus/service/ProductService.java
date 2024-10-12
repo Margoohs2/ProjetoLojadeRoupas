@@ -18,37 +18,40 @@ public class ProductService {
     @Autowired
     private ProductRepository repository;
 
-    public ProductDTO save(ProductDTO user){
-        if(user.getName().length() > 150){
+    public ProductDTO save(ProductDTO product){
+        if(product.getName().length() > 150){
             throw new CommonsException(HttpStatus.BAD_REQUEST,
                     "unichristus.service.user.badrequest",
-                    "O limite de caracteres do nome do usuário é 150");
+                    "O limite de caracteres do nome do produto é 150");
         }
-        //Converte UserDTO em User
-        var entity = DozerConverter.parseObject(user, Product.class);
+        //Converte ProductDTO em Product
+        var entity = DozerConverter.parseObject(product, Product.class);
 
-        //Recebe retorno do save (User)
+        //Recebe retorno do save (Product)
         var entityDTO = repository.save(entity);
 
-        //Converte e retorna o User em UserDTO
+        //Converte e retorna o Product em ProductDTO
         return DozerConverter.parseObject(entityDTO, ProductDTO.class);
     }
 
+    //retorna a lista de todos os produtos por meio de ProductLowDTO
     public List<ProductLowDTO> findAll(){
         return DozerConverter.parseListObjects(
                 repository.findAll(), ProductLowDTO.class);
     }
 
+    //deleta um produto especifico por meio de seu id
     public void delete(Long id){
         repository.deleteById(id);
     }
 
+    //encontra um produto especifico por meio de seu id (com excecao caso nao exista)
     public ProductDTO findById(Long id){
         var entity = repository.findById(id);
         if(entity.isEmpty()){
             throw new CommonsException(HttpStatus.NOT_FOUND,
-                    "unichristus.service.uuser.notfound",
-                    "O usuário com a ID informada, não foi encontrado");
+                    "unichristus.service.product.notfound",
+                    "O produto com o ID informado não foi encontrado");
         }
         return DozerConverter.parseObject(entity.get(), ProductDTO.class);
     }
