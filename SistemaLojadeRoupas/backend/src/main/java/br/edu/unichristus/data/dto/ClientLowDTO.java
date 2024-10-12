@@ -1,4 +1,4 @@
 package br.edu.unichristus.data.dto;
 
-public class ClienteDTO {
+public class ClientLowDTO {
 }
