@@ -21,7 +21,7 @@ public class ProductService {
     public ProductDTO save(ProductDTO product){
         if(product.getName().length() > 150){
             throw new CommonsException(HttpStatus.BAD_REQUEST,
-                    "unichristus.service.user.badrequest",
+                    "unichristus.service.product.badrequest",
                     "O limite de caracteres do nome do produto é 150");
         }
         //Converte ProductDTO em Product
