@@ -5,7 +5,7 @@
 Este projeto é um **Sistema de Gestão de Loja de Roupas**, desenvolvido em Java utilizando **Spring Boot**. Ele foi projetado para gerenciar os produtos, clientes, pedidos e outros recursos de uma loja de roupas de maneira RESTful. O sistema suporta operações CRUD (Criar, Ler, Atualizar, Deletar) para diversas entidades.
 
 ## Funcionalidades Principais :pushpin:	
-- **Gerenciamento de Produtos**: Gerencie itens de vestuário, incluindo nome, preço, tamanho, cor e quantidade em estoque.
+- **Gerenciamento de Produtos**: Gerencie itens de vestuário, incluindo nome, preço, tamanho, cor, descriçãp e quantidade em estoque.
 - **Gerenciamento de Clientes**: Gerencie informações dos clientes, como nome, e-mail, telefone e senha.
 - **Gerenciamento de Pedidos**: Crie os pedidos feitos pelos clientes.
 - **Autenticação de Usuários**: Login e senha básicos para gerenciamento de acesso.
