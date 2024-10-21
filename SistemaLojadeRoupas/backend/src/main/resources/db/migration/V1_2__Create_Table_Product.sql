@@ -1,9 +1,9 @@
 CREATE TABLE public.tb_product (
 	id SERIAL PRIMARY KEY,
-    name STRING NOT NULL,
+    name TEXT NOT NULL,
     price DOUBLE,
-    size STRING,
+    size TEXT,
     quantity INTEGER,
-    color STRING,
-    description STRING
+    color TEXT,
+    description TEXT
 );
