@@ -5,7 +5,7 @@ import br.edu.unichristus.data.dto.ClientLowDTO;
 import br.edu.unichristus.data.model.Client;
 import br.edu.unichristus.dozer.DozerConverter;
 import br.edu.unichristus.exception.CommonsException;
-import br.edu.unichristus.repository.ClienteRepository;
+import br.edu.unichristus.repository.ClientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.List;
 public class ClientService {
 
     @Autowired
-    private ClienteRepository repository;
+    private ClientRepository repository;
 
     public ClientDTO save(ClientDTO client){
         if(client.getName().length() > 150){
