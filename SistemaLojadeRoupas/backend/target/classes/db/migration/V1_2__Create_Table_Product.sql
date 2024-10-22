@@ -1,7 +1,7 @@
 CREATE TABLE public.tb_product (
-	id SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
-    price INTEGER,
+    price DOUBLE PRECISION,
     size TEXT,
     quantity INTEGER,
     color TEXT,
