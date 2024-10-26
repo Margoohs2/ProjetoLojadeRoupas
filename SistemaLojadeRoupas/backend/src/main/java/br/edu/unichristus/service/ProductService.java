@@ -24,28 +24,22 @@ public class ProductService {
                     "unichristus.service.product.badrequest",
                     "O limite de caracteres do nome do produto é 150");
         }
-        //Converte ProductDTO em Product
         var entity = DozerConverter.parseObject(product, Product.class);
 
-        //Recebe retorno do save (Product)
         var entityDTO = repository.save(entity);
 
-        //Converte e retorna o Product em ProductDTO
         return DozerConverter.parseObject(entityDTO, ProductDTO.class);
     }
 
-    //retorna a lista de todos os produtos por meio de ProductLowDTO
     public List<ProductDTO> findAll(){
         return DozerConverter.parseListObjects(
                 repository.findAll(), ProductDTO.class);
     }
 
-    //deleta um produto especifico por meio de seu id
     public void delete(Long id){
         repository.deleteById(id);
     }
 
-    //encontra um produto especifico por meio de seu id (com excecao caso nao exista)
     public ProductDTO findById(Long id){
         var entity = repository.findById(id);
         if(entity.isEmpty()){
