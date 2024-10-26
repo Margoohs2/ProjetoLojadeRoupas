@@ -11,6 +11,7 @@ public class ProductReport {
 
     @ManyToOne
     @JoinColumn(name = "product_id")
+    private Client client;
     private Product product;
     private int quantity;
     private double totalvalue;
