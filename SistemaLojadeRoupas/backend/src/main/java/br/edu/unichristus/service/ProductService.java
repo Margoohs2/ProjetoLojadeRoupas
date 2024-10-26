@@ -35,9 +35,9 @@ public class ProductService {
     }
 
     //retorna a lista de todos os produtos por meio de ProductLowDTO
-    public List<ProductLowDTO> findAll(){
+    public List<ProductDTO> findAll(){
         return DozerConverter.parseListObjects(
-                repository.findAll(), ProductLowDTO.class);
+                repository.findAll(), ProductDTO.class);
     }
 
     //deleta um produto especifico por meio de seu id

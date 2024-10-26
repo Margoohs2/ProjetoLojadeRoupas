@@ -36,7 +36,7 @@ public class ProductController {
     }
 
     @GetMapping("/all")
-    public List<ProductLowDTO> findAll(){
+    public List<ProductDTO> findAll(){
         return service.findAll();
     }
 
