@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 @Service
 public class ReportService {
 
-
     @Autowired
     private br.edu.unichristus.repository.SaleRepository repository;
 
