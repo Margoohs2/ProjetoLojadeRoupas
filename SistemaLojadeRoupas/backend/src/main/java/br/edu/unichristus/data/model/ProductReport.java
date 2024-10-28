@@ -10,12 +10,9 @@ public class ProductReport {
     private Long id;
 
     @ManyToOne
+    @JoinColumn(name = "product_id")
     private Client client;
-
-    @ManyToOne
     private Product product;
-
     private int quantity;
-
     private double totalvalue;
 }
