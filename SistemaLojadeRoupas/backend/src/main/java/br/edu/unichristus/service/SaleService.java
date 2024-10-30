@@ -17,3 +17,5 @@ public class SaleService {
     private br.edu.unichristus.repository.SaleRepository repository;
 
 }
+
+//teste
