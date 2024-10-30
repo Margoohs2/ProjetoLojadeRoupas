@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/reports")
+@RequestMapping("/api/v1/sales")
 public class SaleController {
 
     @Autowired
@@ -37,7 +37,7 @@ public class SaleController {
         return service.findById(id);
     }
 
-    @GetMapping("/sales")
+    @GetMapping("/report")
     public ResponseEntity<String> gerarRelatorio() {
         // Chama o método gerarRelatorio do serviço para obter o relatório de vendas
         String relatorio = service.generateReport();
