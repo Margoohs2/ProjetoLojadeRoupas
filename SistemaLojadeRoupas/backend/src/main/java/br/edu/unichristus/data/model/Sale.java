@@ -2,7 +2,7 @@ package br.edu.unichristus.data.model;
 import jakarta.persistence.*;
 import lombok.Data;
 @Entity
-@Table(name = "tb_ProductReport")
+@Table(name = "tb_sale")
 @Data
 public class Sale {
     @Id
