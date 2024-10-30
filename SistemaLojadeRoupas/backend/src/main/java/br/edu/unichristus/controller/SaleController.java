@@ -19,7 +19,6 @@ public class SaleController {
 
     @GetMapping("/sales")
     public ResponseEntity<Map<Product, Integer>> salesReport() {
-        Map<Product, Integer> report = reportService.generateProductReport();
-        return ResponseEntity.ok(report);
+        return null;
     }
 }
