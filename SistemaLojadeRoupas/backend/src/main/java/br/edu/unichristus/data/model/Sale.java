@@ -18,3 +18,5 @@ public class Sale {
     private int quantity;
     private double totalvalue;
 }
+
+//teste

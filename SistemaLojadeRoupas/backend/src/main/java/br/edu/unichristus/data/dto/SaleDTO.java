@@ -10,3 +10,5 @@ public class SaleDTO {
     private int quantity;
     private double totalvalue;
 }
+
+//teste
