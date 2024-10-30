@@ -10,10 +10,11 @@ public class Sale {
     private Long id;
 
     @ManyToOne
-
     private Client client;
+
     @ManyToOne
     private Product product;
+
     private int quantity;
     private double totalvalue;
 }
