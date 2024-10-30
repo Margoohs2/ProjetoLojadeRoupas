@@ -1,8 +1,6 @@
 package br.edu.unichristus.controller;
 
-import br.edu.unichristus.data.dto.ProductDTO;
 import br.edu.unichristus.data.dto.SaleDTO;
-import br.edu.unichristus.data.model.Sale;
 import br.edu.unichristus.service.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
