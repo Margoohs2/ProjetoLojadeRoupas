@@ -1,7 +1,7 @@
 package br.edu.unichristus.controller;
 
 import br.edu.unichristus.data.model.Product;
-import br.edu.unichristus.service.ReportService;
+import br.edu.unichristus.service.SaleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -12,10 +12,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/reports")
-public class ReportController {
+public class SaleController {
 
     @Autowired
-    private ReportService reportService;
+    private SaleService reportService;
 
     @GetMapping("/sales")
     public ResponseEntity<Map<Product, Integer>> salesReport() {
