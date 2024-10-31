@@ -48,7 +48,7 @@ public class SaleService {
 
         // Montar o relatório
         return "Relatório de Vendas:\n" +
-                "Total de Vendas: " + totalVendas + "\n" +
+                "Total das Vendas: " + totalVendas + "\n" +
                 "Vendas Realizadas: " + vendas.size();
     }
 
