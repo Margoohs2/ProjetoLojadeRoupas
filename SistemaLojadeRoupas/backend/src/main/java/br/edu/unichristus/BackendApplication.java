@@ -8,12 +8,11 @@ import io.swagger.v3.oas.annotations.info.Info;
 
 @OpenAPIDefinition(
 		info = @Info(
-				title = "API Backend Topicos Especiais",
+				title = "API Loja de Roupas",
 				version = "1.0",
-				description = "Trata-se da API que está sendo desenvolvida na disicplina TEPW",
+				description = "Projeto de uma API para uma loja de roupas.",
 				contact = @Contact(
 						name = "Unichristus",
-						email = "adriano.candido@unichristus.edu.br",
 						url = "https://www.google.com")
 		)
 )
